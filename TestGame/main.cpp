@@ -17,13 +17,52 @@
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 
+#include <vector>
+#include <string>
+#include <iostream>
+#include <sstream>
+
+#include "GameEntity.h"
+
 // Here is a small helper for you ! Have a look.
 #include "ResourcePath.hpp"
 
+class GameObject : public sf::Drawable {
+
+    
+protected:
+    sf::Vector2f position;
+    sf::Texture texture;
+    sf::Sprite sprite;
+    
+public:
+    
+    GameObject(std::string sprite_file, double x, double y) {
+        this->position = sf::Vector2f(x, y);
+        this->texture.loadFromFile(resourcePath() + sprite_file);
+        this->sprite.setTexture(this->texture);
+    }
+    
+    sf::Vector2f getPosition() {
+        return position;
+    }
+    
+    virtual void update();
+    virtual void draw(sf::RenderWindow &window);
+};
+
+
+
 int main(int, char const**)
 {
+    
+    std::vector<GameObject> entityList;
     // Create the main window
-    sf::RenderWindow window(sf::VideoMode(800, 600), "SFML window");
+    sf::ContextSettings settings;
+    settings.antialiasingLevel = 8;
+    
+    sf::Window();
+    sf::RenderWindow window(sf::VideoMode(800, 600), "TEST", sf::Style::Default, settings);
 
     // Set the Icon
     sf::Image icon;
@@ -45,7 +84,7 @@ int main(int, char const**)
         return EXIT_FAILURE;
     }
     sf::Text text("Hello SFML", font, 50);
-    text.setColor(sf::Color::Black);
+    text.setColor(sf::Color::White);
 
     // Load a music to play
     sf::Music music;
@@ -55,10 +94,23 @@ int main(int, char const**)
 
     // Play the music
     music.play();
-
+    sf::CircleShape circle(50);
+    circle.setPointCount(4);
+    
+    
+    sf::Vertex line[] =
+    {
+        sf::Vertex(sf::Vector2f(10, 10)),
+        sf::Vertex(sf::Vector2f(0, 0))
+    };
+    
+    
+    sf::Clock clock;
     // Start the game loop
     while (window.isOpen())
     {
+        
+        sf::Time delta = clock.restart();
         // Process events
         sf::Event event;
         while (window.pollEvent(event))
@@ -72,16 +124,30 @@ int main(int, char const**)
             if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape) {
                 window.close();
             }
+            
+            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Space) {
+                text.move(1,1);
+            }
+            
+            if (event.type == sf::Event::MouseMoved) {
+                //sf::Vector2i mouse_pos =  sf::Mouse::getPosition();
+                line[1] = static_cast<sf::Vector2f>(sf::Mouse::getPosition(window));
+                //line[1] = sf::Vertex(sf::Vector2f(mouse_pos.x, mouse_pos.y));
+            }
         }
+        
 
         // Clear screen
         window.clear();
 
         // Draw the sprite
-        window.draw(sprite);
+        //window.draw(sprite);
 
         // Draw the string
         window.draw(text);
+        
+        window.draw(circle);
+        window.draw(line, 2, sf::Lines);
 
         // Update the window
         window.display();

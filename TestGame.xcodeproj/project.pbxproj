@@ -7,15 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A02CE4E0197233C100D89C70 /* Jump.ogg in Resources */ = {isa = PBXBuildFile; fileRef = A02CE4DD197233C100D89C70 /* Jump.ogg */; };
+		A02CE4E1197233C100D89C70 /* Mario_Theme.ogg in Resources */ = {isa = PBXBuildFile; fileRef = A02CE4DE197233C100D89C70 /* Mario_Theme.ogg */; };
+		A02CE4E2197233C100D89C70 /* Mario_tileset.png in Resources */ = {isa = PBXBuildFile; fileRef = A02CE4DF197233C100D89C70 /* Mario_tileset.png */; };
+		A02CE4E61975169E00D89C70 /* GameEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A02CE4E51975169E00D89C70 /* GameEntity.cpp */; };
 		A0C1AADD197107EC000D33FA /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = A0C1AADC197107EC000D33FA /* ResourcePath.mm */; };
 		A0C1AAE0197107EC000D33FA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0C1AADF197107EC000D33FA /* main.cpp */; };
 		A0C1AAE3197107EC000D33FA /* cute_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A0C1AAE2197107EC000D33FA /* cute_image.jpg */; };
 		A0C1AAE5197107EC000D33FA /* nice_music.ogg in Resources */ = {isa = PBXBuildFile; fileRef = A0C1AAE4197107EC000D33FA /* nice_music.ogg */; };
 		A0C1AAE7197107EC000D33FA /* sansation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A0C1AAE6197107EC000D33FA /* sansation.ttf */; };
 		A0C1AAE9197107EC000D33FA /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A0C1AAE8197107EC000D33FA /* icon.png */; };
+		A0C1AAF0197119E6000D33FA /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0C1AAEF197119E6000D33FA /* Player.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A02CE4DD197233C100D89C70 /* Jump.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; name = Jump.ogg; path = "../../../Downloads/Mario source/Jump.ogg"; sourceTree = "<group>"; };
+		A02CE4DE197233C100D89C70 /* Mario_Theme.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; name = Mario_Theme.ogg; path = "../../../Downloads/Mario source/Mario_Theme.ogg"; sourceTree = "<group>"; };
+		A02CE4DF197233C100D89C70 /* Mario_tileset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mario_tileset.png; path = "../../../Downloads/Mario source/Mario_tileset.png"; sourceTree = "<group>"; };
+		A02CE4E3197514CC00D89C70 /* GameEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameEntity.h; sourceTree = "<group>"; };
+		A02CE4E4197515FA00D89C70 /* PhysicalEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhysicalEntity.h; sourceTree = "<group>"; };
+		A02CE4E51975169E00D89C70 /* GameEntity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameEntity.cpp; sourceTree = "<group>"; };
 		A0C1AAD7197107EC000D33FA /* TestGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0C1AADB197107EC000D33FA /* TestGame-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestGame-Info.plist"; sourceTree = "<group>"; };
 		A0C1AADC197107EC000D33FA /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
@@ -25,6 +36,8 @@
 		A0C1AAE4197107EC000D33FA /* nice_music.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; path = nice_music.ogg; sourceTree = "<group>"; };
 		A0C1AAE6197107EC000D33FA /* sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sansation.ttf; sourceTree = "<group>"; };
 		A0C1AAE8197107EC000D33FA /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		A0C1AAEF197119E6000D33FA /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		A0C1AAF11972228D000D33FA /* Player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +72,11 @@
 			children = (
 				A0C1AADC197107EC000D33FA /* ResourcePath.mm */,
 				A0C1AADE197107EC000D33FA /* ResourcePath.hpp */,
+				A0C1AAEF197119E6000D33FA /* Player.cpp */,
+				A0C1AAF11972228D000D33FA /* Player.h */,
+				A02CE4E3197514CC00D89C70 /* GameEntity.h */,
+				A02CE4E51975169E00D89C70 /* GameEntity.cpp */,
+				A02CE4E4197515FA00D89C70 /* PhysicalEntity.h */,
 				A0C1AADF197107EC000D33FA /* main.cpp */,
 				A0C1AAE1197107EC000D33FA /* Resources */,
 				A0C1AADA197107EC000D33FA /* Supporting Files */,
@@ -77,6 +95,9 @@
 		A0C1AAE1197107EC000D33FA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A02CE4DD197233C100D89C70 /* Jump.ogg */,
+				A02CE4DE197233C100D89C70 /* Mario_Theme.ogg */,
+				A02CE4DF197233C100D89C70 /* Mario_tileset.png */,
 				A0C1AAE2197107EC000D33FA /* cute_image.jpg */,
 				A0C1AAE4197107EC000D33FA /* nice_music.ogg */,
 				A0C1AAE6197107EC000D33FA /* sansation.ttf */,
@@ -142,7 +163,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A02CE4E2197233C100D89C70 /* Mario_tileset.png in Resources */,
+				A02CE4E1197233C100D89C70 /* Mario_Theme.ogg in Resources */,
 				A0C1AAE9197107EC000D33FA /* icon.png in Resources */,
+				A02CE4E0197233C100D89C70 /* Jump.ogg in Resources */,
 				A0C1AAE7197107EC000D33FA /* sansation.ttf in Resources */,
 				A0C1AAE5197107EC000D33FA /* nice_music.ogg in Resources */,
 				A0C1AAE3197107EC000D33FA /* cute_image.jpg in Resources */,
@@ -174,6 +198,8 @@
 			files = (
 				A0C1AAE0197107EC000D33FA /* main.cpp in Sources */,
 				A0C1AADD197107EC000D33FA /* ResourcePath.mm in Sources */,
+				A02CE4E61975169E00D89C70 /* GameEntity.cpp in Sources */,
+				A0C1AAF0197119E6000D33FA /* Player.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,16 +313,20 @@
 		A0C1AAED197107EC000D33FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				INFOPLIST_FILE = "TestGame/TestGame-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.9;
 			};
 			name = Debug;
 		};
 		A0C1AAEE197107EC000D33FA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				INFOPLIST_FILE = "TestGame/TestGame-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.9;
 			};
 			name = Release;
 		};
@@ -319,6 +349,7 @@
 				A0C1AAEE197107EC000D33FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
