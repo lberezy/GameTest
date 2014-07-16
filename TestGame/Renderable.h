@@ -17,7 +17,7 @@ namespace game {
     
     public:
         virtual void update(float delta) {};
-        void render(sf::RenderTarget &target) {};
+        virtual void render(sf::RenderTarget &target) {};
     };
     
 };

@@ -11,6 +11,7 @@
 
 #include "GameEntity.h"
 #include "Renderable.h"
+#include "Animation.h"
 
 namespace game {
     class PhysicalEntity : public GameEntity, public Renderable {
@@ -19,16 +20,15 @@ namespace game {
     protected:
         bool solid;
         sf::Vector2f position;
-        sf::Texture texture;
-        sf::Sprite sprite;
+        game::Animation *sprite;
         
     public:
         
-        PhysicalEntity(std::string sprite_file, double x, double y);
+        PhysicalEntity(game::Animation *sprite, double x, double y);
         
         sf::Vector2f getPosition();
         virtual void update();
-        virtual void draw(sf::RenderWindow &window);
+        void draw(sf::RenderWindow &window);
     };
 };
 #endif

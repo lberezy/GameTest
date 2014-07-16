@@ -30,36 +30,13 @@
 // Here is a small helper for you ! Have a look.
 #include "ResourcePath.hpp"
 
-class GameObject : public sf::Drawable {
-
-    
-protected:
-    sf::Vector2f position;
-    sf::Texture texture;
-    sf::Sprite sprite;
-    
-public:
-    
-    GameObject(std::string sprite_file, double x, double y) {
-        this->position = sf::Vector2f(x, y);
-        this->texture.loadFromFile(resourcePath() + sprite_file);
-        this->sprite.setTexture(this->texture);
-    }
-    
-    sf::Vector2f getPosition() {
-        return position;
-    }
-    
-    virtual void update();
-    virtual void draw(sf::RenderWindow &window);
-};
 
 
 
 int main(int, char const**)
 {
     
-    std::vector<GameObject> entityList;
+    std::vector<game::GameEntity> entityList;
     // Create the main window
     sf::ContextSettings settings;
     settings.antialiasingLevel = 0;
@@ -144,6 +121,10 @@ int main(int, char const**)
             }
         }
         
+        // update all entities
+        for(game::GameEntity e : entityList) {
+            e.update(delta);
+        }
 
         // Clear screen
         window.clear();

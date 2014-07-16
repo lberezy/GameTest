@@ -15,11 +15,11 @@
 namespace game {
     class Animation : public sf::Sprite, public game::Renderable {
     public:
-        Animation(sf::Image& image, int frames, int framerate);
+        Animation(sf::Texture &texture, int frames, int framerate);
         ~Animation();
         
-        void update(float frametime);
-        void render(sf::RenderTarget& target);
+        virtual void update(float frametime);
+        virtual void render(sf::RenderTarget& target);
         void play();
         void pause();
         bool isPlaying();

@@ -11,17 +11,17 @@
 
 #include "Animation.h"
 
-game::Animation::Animation(sf::Image& image, int frames, int framerate) {
-    this->setImage(image);
+game::Animation::Animation(sf::Texture &texture, int frames, int framerate) {
+    this->setTexture(texture);
     this->frames = frames;
     this->framerate = framerate;
     
     playing = false;
-    frameWidth = image.getWidth() / frames;
-    frameHeight = image.getHeight();
+    frameWidth = texture.getSize().x / frames;
+    frameHeight = texture.getSize().y;
     currentFrame = 0.f;
     
-    UpdateRect();
+    updateRect();
 }
 
 game::Animation::~Animation() {
@@ -61,27 +61,27 @@ void game::Animation::play() {
     playing = true;
 }
 
-void game::Animation::Pause() {
+void game::Animation::pause() {
     playing = false;
 }
 
-bool game::Animation::IsPlaying() {
+bool game::Animation::isPlaying() {
     return playing;
 }
 
-int game::Animation::GetCurrentFrame() {
+int game::Animation::getCurrentFrame() {
     return currentFrame;
 }
 
-void game::Animation::SetCurrentFrame(int frame) {
+void game::Animation::setCurrentFrame(int frame) {
     currentFrame = frame;
 }
 
-int game::Animation::GetFramerate() {
+int game::Animation::getFramerate() {
     return framerate;
 }
 
-void game::Animation::SetFramerate(int framerate) {
+void game::Animation::setFramerate(int framerate) {
     if (framerate >= 0)
         this->framerate = framerate;
 }

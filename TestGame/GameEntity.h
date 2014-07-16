@@ -16,10 +16,11 @@ namespace game {
     class GameEntity {
         
         static unsigned int ID_NUM;
-        virtual void update(float delta) {};
     public:
-        GameEntity();
-        ~GameEntity();
+        GameEntity() {};
+        ~GameEntity() {};
+        virtual void update(float delta) {};
+
     };
 };
 

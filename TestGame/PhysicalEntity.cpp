@@ -12,13 +12,19 @@
 #include "ResourcePath.hpp"
 
 
-game::PhysicalEntity::PhysicalEntity(std::string sprite_file, double x, double y) {
+game::PhysicalEntity::PhysicalEntity(game::Animation *sprite, double x, double y) {
     this->position = sf::Vector2f(x, y);
-    this->texture.loadFromFile(resourcePath() + sprite_file);
-    this->sprite.setTexture(this->texture);
+    this->sprite = sprite;
 }
 
 void game::PhysicalEntity::draw(sf::RenderWindow &window) {
-    window.draw(this->sprite);
-    
+    window.draw(*this->sprite);
+}
+
+sf::Vector2f game::PhysicalEntity::getPosition() {
+    return this->position;
+}
+
+void game::PhysicalEntity::update() {
+
 }
