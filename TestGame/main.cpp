@@ -17,12 +17,15 @@
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 
+#include <tmx/MapLoader.h>
+
 #include <vector>
 #include <string>
 #include <iostream>
 #include <sstream>
 
 #include "GameEntity.h"
+#include "World.h"
 
 // Here is a small helper for you ! Have a look.
 #include "ResourcePath.hpp"
@@ -59,11 +62,16 @@ int main(int, char const**)
     std::vector<GameObject> entityList;
     // Create the main window
     sf::ContextSettings settings;
-    settings.antialiasingLevel = 8;
+    settings.antialiasingLevel = 0;
     
     sf::Window();
     sf::RenderWindow window(sf::VideoMode(800, 600), "TEST", sf::Style::Default, settings);
 
+    
+    // load map
+    
+    game::World map("Untitled.tmx");
+    
     // Set the Icon
     sf::Image icon;
     if (!icon.loadFromFile(resourcePath() + "icon.png")) {
@@ -145,7 +153,8 @@ int main(int, char const**)
 
         // Draw the string
         window.draw(text);
-        
+        //window.draw(map);
+        map.render(window);
         window.draw(circle);
         window.draw(line, 2, sf::Lines);
 

@@ -15,9 +15,9 @@
 namespace game {
     class GameEntity {
         
-        static ID_NUM;
-        virtual void update() {};
-        
+        static unsigned int ID_NUM;
+        virtual void update(float delta) {};
+    public:
         GameEntity();
         ~GameEntity();
     };

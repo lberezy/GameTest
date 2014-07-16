@@ -10,5 +10,12 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
+#include "PhysicalEntity.h"
+
+namespace game {
+    class player : public PhysicalEntity {
+    
+    }
+}
 #endif
 
