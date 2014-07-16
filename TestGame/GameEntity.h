@@ -14,13 +14,16 @@
 
 namespace game {
     class GameEntity {
+    protected:
         
-        static unsigned int ID_NUM;
+        static unsigned int ID_COUNTER;
+        unsigned int id;
+        
     public:
-        GameEntity() {};
-        ~GameEntity() {};
+        GameEntity();
+        ~GameEntity();
         virtual void update(float delta) {};
-
+        unsigned int getID();
     };
 };
 

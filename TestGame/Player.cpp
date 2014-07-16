@@ -8,10 +8,5 @@
 
 #include <stdio.h>
 
-#include <SFML/System.hpp>
-#include <SFML/Graphics.hpp>
+#include "player.h"
 
-class Player : public sf::Drawable{
-
-
-};

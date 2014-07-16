@@ -13,18 +13,24 @@
 
 #include "Renderable.h"
 #include "ResourcePath.hpp"
+#include "GameEntity.h"
 #include <string>
+
+
 
 
 namespace game {
 
+    typedef std::map<int, game::GameEntity*> EntityMap;
+
+    
     class World : public game::Renderable {
         tmx::MapLoader *map;
-    
+        EntityMap entities;
     public:
         World(std::string map_file);
         void render(sf::RenderTarget &target);
-
+        void addEntity(game::GameEntity*);
     };
     
     

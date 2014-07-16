@@ -36,7 +36,9 @@
 int main(int, char const**)
 {
     
-    std::vector<game::GameEntity> entityList;
+    std::vector<game::GameEntity*> entityList;
+    std::vector<game::Renderable*> renderableList;
+    
     // Create the main window
     sf::ContextSettings settings;
     settings.antialiasingLevel = 0;
@@ -90,7 +92,7 @@ int main(int, char const**)
             if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Space) {
                 view.move(100, 100);
                 view.zoom(0.5f);
-                printf("test");
+                view.rotate(30);
             }
             
             if (event.type == sf::Event::Resized)
@@ -107,9 +109,6 @@ int main(int, char const**)
         }
         
         // update all entities
-        for(game::GameEntity e : entityList) {
-            e.update(delta);
-        }
 
         // Clear screen
         window.clear();

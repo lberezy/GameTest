@@ -12,6 +12,7 @@
 		A00FECC41976930E00C92118 /* character_01.bmp in Resources */ = {isa = PBXBuildFile; fileRef = A00FECC31976930E00C92118 /* character_01.bmp */; };
 		A00FECC61976AB8200C92118 /* test.tmx in Resources */ = {isa = PBXBuildFile; fileRef = A00FECC51976AB8200C92118 /* test.tmx */; };
 		A00FECC81976AB9400C92118 /* nestle.png in Resources */ = {isa = PBXBuildFile; fileRef = A00FECC71976AB9400C92118 /* nestle.png */; };
+		A00FECCA1976B59300C92118 /* GameEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A00FECC91976B59300C92118 /* GameEntity.cpp */; };
 		A02CE4E0197233C100D89C70 /* Jump.ogg in Resources */ = {isa = PBXBuildFile; fileRef = A02CE4DD197233C100D89C70 /* Jump.ogg */; };
 		A02CE4E1197233C100D89C70 /* Mario_Theme.ogg in Resources */ = {isa = PBXBuildFile; fileRef = A02CE4DE197233C100D89C70 /* Mario_Theme.ogg */; };
 		A02CE4E2197233C100D89C70 /* Mario_tileset.png in Resources */ = {isa = PBXBuildFile; fileRef = A02CE4DF197233C100D89C70 /* Mario_tileset.png */; };
@@ -44,6 +45,7 @@
 		A00FECC31976930E00C92118 /* character_01.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = character_01.bmp; sourceTree = "<group>"; };
 		A00FECC51976AB8200C92118 /* test.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test.tmx; sourceTree = "<group>"; };
 		A00FECC71976AB9400C92118 /* nestle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nestle.png; sourceTree = "<group>"; };
+		A00FECC91976B59300C92118 /* GameEntity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameEntity.cpp; sourceTree = "<group>"; };
 		A02CE4DD197233C100D89C70 /* Jump.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; name = Jump.ogg; path = "../../../Downloads/Mario source/Jump.ogg"; sourceTree = "<group>"; };
 		A02CE4DE197233C100D89C70 /* Mario_Theme.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; name = Mario_Theme.ogg; path = "../../../Downloads/Mario source/Mario_Theme.ogg"; sourceTree = "<group>"; };
 		A02CE4DF197233C100D89C70 /* Mario_tileset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mario_tileset.png; path = "../../../Downloads/Mario source/Mario_tileset.png"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				A0C1AAEF197119E6000D33FA /* Player.cpp */,
 				A0C1AAF11972228D000D33FA /* Player.h */,
 				A02CE4E3197514CC00D89C70 /* GameEntity.h */,
+				A00FECC91976B59300C92118 /* GameEntity.cpp */,
 				A00FECC01976430F00C92118 /* Animation.h */,
 				A00FECC119765FFA00C92118 /* Animation.cpp */,
 				A00FECBC19760B1B00C92118 /* World.h */,
@@ -266,6 +269,7 @@
 				A02CE51B197562D300D89C70 /* QuadTreeNode.cpp in Sources */,
 				A00FECBF19762C5800C92118 /* World.cpp in Sources */,
 				A02CE518197562D300D89C70 /* MapLoaderPublic.cpp in Sources */,
+				A00FECCA1976B59300C92118 /* GameEntity.cpp in Sources */,
 				A0C1AAE0197107EC000D33FA /* main.cpp in Sources */,
 				A02CE515197562D300D89C70 /* DebugShape.cpp in Sources */,
 				A0C1AADD197107EC000D33FA /* ResourcePath.mm in Sources */,

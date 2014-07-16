@@ -15,7 +15,7 @@
 namespace game {
     class player : public PhysicalEntity {
     
-    }
-}
+    };
+};
 #endif
 

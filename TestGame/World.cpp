@@ -22,3 +22,7 @@ void game::World::render(sf::RenderTarget &target) {
         map->Draw(target, i);
     }
 }
+
+void game::World::addEntity(game::GameEntity *entity) {
+    entities.insert(std::pair<int, game::GameEntity*>(entity->getID(), entity));
+}
