@@ -47,7 +47,11 @@ int main(int, char const**)
     
     // load map
     
-    game::World map("Untitled.tmx");
+    game::World map("test.tmx");
+    
+    sf::View view(sf::Vector2f(350, 300), sf::Vector2f(300, 200));
+    
+    window.setView(view);
     
     // Set the Icon
     sf::Image icon;
@@ -56,33 +60,6 @@ int main(int, char const**)
     }
     window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
 
-    // Load a sprite to display
-    sf::Texture texture;
-    if (!texture.loadFromFile(resourcePath() + "cute_image.jpg")) {
-        return EXIT_FAILURE;
-    }
-    sf::Sprite sprite(texture);
-
-    // Create a graphical text to display
-    sf::Font font;
-    if (!font.loadFromFile(resourcePath() + "sansation.ttf")) {
-        return EXIT_FAILURE;
-    }
-    sf::Text text("Hello SFML", font, 50);
-    text.setColor(sf::Color::White);
-
-    // Load a music to play
-    sf::Music music;
-    if (!music.openFromFile(resourcePath() + "nice_music.ogg")) {
-        return EXIT_FAILURE;
-    }
-
-    // Play the music
-    music.play();
-    sf::CircleShape circle(50);
-    circle.setPointCount(4);
-    
-    
     sf::Vertex line[] =
     {
         sf::Vertex(sf::Vector2f(10, 10)),
@@ -95,7 +72,7 @@ int main(int, char const**)
     while (window.isOpen())
     {
         
-        sf::Time delta = clock.restart();
+        float delta = clock.restart().asSeconds();
         // Process events
         sf::Event event;
         while (window.pollEvent(event))
@@ -111,13 +88,21 @@ int main(int, char const**)
             }
             
             if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Space) {
-                text.move(1,1);
+                view.move(100, 100);
+                view.zoom(0.5f);
+                printf("test");
             }
             
+            if (event.type == sf::Event::Resized)
+            {
+                // update the view to the new size of the window
+                sf::FloatRect visibleArea(0, 0, event.size.width, event.size.height);
+                window.setView(sf::View(visibleArea));
+            }
+            
+            
             if (event.type == sf::Event::MouseMoved) {
-                //sf::Vector2i mouse_pos =  sf::Mouse::getPosition();
                 line[1] = static_cast<sf::Vector2f>(sf::Mouse::getPosition(window));
-                //line[1] = sf::Vertex(sf::Vector2f(mouse_pos.x, mouse_pos.y));
             }
         }
         
@@ -128,17 +113,7 @@ int main(int, char const**)
 
         // Clear screen
         window.clear();
-
-        // Draw the sprite
-        //window.draw(sprite);
-
-        // Draw the string
-        window.draw(text);
-        //window.draw(map);
         map.render(window);
-        window.draw(circle);
-        window.draw(line, 2, sf::Lines);
-
         // Update the window
         window.display();
     }

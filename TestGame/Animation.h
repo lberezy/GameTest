@@ -37,7 +37,7 @@ namespace game {
         bool playing;
         int frameWidth, frameHeight;
         
-        void updateRect();
+        void updateAnimFrame();
     };
 };
 

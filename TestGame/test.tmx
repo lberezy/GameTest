@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="64" height="32" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="nestle" tilewidth="16" tileheight="16">
+  <image source="../../../Downloads/nestle.png" width="2048" height="2048"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="64" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztwQENAAAAwqD3T20ON6AAAAAAAAAAgHcDIAAAAQ==
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="64" height="32">
+  <data encoding="base64" compression="zlib">
+   eJztlslu00AYx7/WCU1TqS8wpiwHQFV6KA2k9AAXRIJbFom24nmgPAQIEHBABdpDBIe0cGil0iXuIrG8D//R2Io9sceOM5ELzOEne8bOeH7fMsrmMNGmwWAwGLSzVSTaLua/D8P/zbdTsId/EdPfBoMhb64WBYNYuzVCtDGid83GmcHF4qZFdMvKPyd5+f8NtIeIXHA4pGe9ReR76ZTnPIgDRs8RLWhY6ye8f3lExWCPiPYpf2fZv6TBP+jOWSx0v1NHjTU01VmiF87J+RRnJfefH+7PP4075zvcdwP+N/DeHNgZ1e/fhrubwr8NXHCY4RvLluh37vyoIJDdtwsd6hjf8eZ2cK16XBtA/qP8jzA+luaejBOtgGfj2fwfRzjLcNddXmuW4AD3e/iN43EygPPSKaGuS+G5exjfl+auo/ZqYDZDDS6n3PdtS3g2YmgnxC9T/uHpBlxruD8CxyV93+jFP86d4/Twf3FGkScHzxYSeKDxrEnrXyvqy321rMg53NwETnLw57RiYtCr/2fF/tP6t8phvkjjVUb0EO89ZYIV1r9/XB+k9a+ib2ext5myuAafNTC+W+742xWisxITlY5/bUzNuh1efynmP0uv/nVeAxJ+78flQsUGjwPYBwfgK9gCL+H6SuJ1RTzjXLbDVKRxl3/g/gNL9j8/SXQBXJxMH5u5sW7W7Oj5OLL6B+HfvOL5//D8fnt7/MhErNaZ2v8NvN+Cd336J9G09fv7fGIdmt7VrxXOexZmlan9n18ieqEgrbOqJnx/ewo9LzExFfZfk3ybETGImvP95flpW92r07aaP1Cueps=
+  </data>
+ </layer>
+</map>

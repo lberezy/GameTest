@@ -21,7 +21,7 @@ game::Animation::Animation(sf::Texture &texture, int frames, int framerate) {
     frameHeight = texture.getSize().y;
     currentFrame = 0.f;
     
-    updateRect();
+    updateAnimFrame();
 }
 
 game::Animation::~Animation() {
@@ -34,7 +34,7 @@ void game::Animation::render(sf::RenderTarget& target) {
 
 void game::Animation::update(float frametime) {
     if (playing) {
-        updateRect();
+        updateAnimFrame();
         currentFrame += (float)framerate * frametime;
         while (currentFrame > frames) {
             currentFrame -= frames;
@@ -42,7 +42,7 @@ void game::Animation::update(float frametime) {
     }
 }
 
-void game::Animation::updateRect() {
+void game::Animation::updateAnimFrame() {
     this->setTextureRect(sf::IntRect(frameWidth * (int)currentFrame,
                                  0,
                                  frameWidth * (int)currentFrame + frameWidth,
