@@ -19,6 +19,8 @@
 #include <SFML/Graphics/View.hpp>
 #include <SFML/Graphics/Texture.hpp>
 
+#include <tmx/MapLoader.h>
+
 #include <array>
 
 
@@ -54,6 +56,7 @@ private:
     sf::RenderWindow&					mWindow;
     sf::View							mWorldView;
     TextureHolder						mTextures;
+    tmx::MapLoader  mTiledMap;
     
     SceneNode							mSceneGraph;
     std::array<SceneNode*, LayerCount>	mSceneLayers;
