@@ -9,13 +9,23 @@
 #include <stdio.h>
 #include "GameEntity.h"
 
-game::GameEntity::GameEntity() {
-    //id = ID_COUNTER++;
+void Entity::setVelocity(sf::Vector2f velocity)
+{
+    mVelocity = velocity;
 }
 
-game::GameEntity::~GameEntity() {
+void Entity::setVelocity(float vx, float vy)
+{
+    mVelocity.x = vx;
+    mVelocity.y = vy;
 }
 
-unsigned int game::GameEntity::getID() {
-    return this->id;
+sf::Vector2f Entity::getVelocity() const
+{
+    return mVelocity;
+}
+
+void Entity::updateCurrent(sf::Time dt)
+{
+    move(mVelocity * dt.asSeconds());
 }
