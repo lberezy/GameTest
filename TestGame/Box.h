@@ -1,24 +1,24 @@
-#ifndef PERSON_H
-#define PERSON_H
-
-
-#include <SFML/Graphics/Sprite.hpp>
+#ifndef BOX_H
+#define BOX_H
 
 #include "GameEntity.h"
 #include "ResourceIdentifiers.h"
 
-class Person : public SceneNode {
-    
+#include <SFML/Graphics/Sprite.hpp>
+#include <Box2D/Box2D.h>
+
+
+class Box : public Entity
+{
 public:
     enum Type
     {
-        Player,
-        Raptor
+        Regular
     };
     
     
 public:
-    Person(Type type, const TextureHolder& textures);
+    Box(Type type, const TextureHolder& textures);
     
     
 private:
@@ -28,6 +28,7 @@ private:
 private:
     Type				mType;
     sf::Sprite			mSprite;
+    b2BodyDef BodyDef;
+
 };
 #endif
-

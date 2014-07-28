@@ -1,11 +1,3 @@
-//
-//  SpriteNode.h
-//  TestGame
-//
-//  Created by Lucas Berezy on 21/07/2014.
-//  Copyright (c) 2014 Lucas Berezy. All rights reserved.
-//
-
 #ifndef SPRITENODE_H
 #define SPRITENODE_H
 

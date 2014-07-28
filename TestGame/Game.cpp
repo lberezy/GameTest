@@ -1,15 +1,9 @@
-
-//
-//  File.cpp
-//  TestGame
-//
-//  Created by Lucas Berezy on 20/07/2014.
-//  Copyright (c) 2014 Lucas Berezy. All rights reserved.
-//
-
 #include <stdio.h>
 #include <string>
 #include "Game.h"
+
+#include "StringHelpers.h"
+#include "ResourcePath.hpp"
 
 #include <SFML/Window/Event.hpp>
 
@@ -25,7 +19,7 @@ Game::Game()
 , mStatisticsNumFrames(0)
 {
     //mWindow.setVerticalSyncEnabled(true);
-    mFont.loadFromFile("Media/Sansation.ttf");
+    mFont.loadFromFile(resourcePath() + "Sansation.ttf");
     mStatisticsText.setFont(mFont);
     mStatisticsText.setPosition(5.f, 5.f);
     mStatisticsText.setCharacterSize(10);
@@ -35,14 +29,19 @@ Game::Game()
 void Game::run() {
     sf::Clock clock;
     sf::Time timeSinceLastUpdate = sf::Time::Zero;
-    while (mWindow.isOpen()) {
-        processEvents();
-        timeSinceLastUpdate += clock.restart();
-        while (timeSinceLastUpdate > TimePerFrame) {
+    while (mWindow.isOpen())
+    {
+        sf::Time elapsedTime = clock.restart();
+        timeSinceLastUpdate += elapsedTime;
+        while (timeSinceLastUpdate > TimePerFrame)
+        {
             timeSinceLastUpdate -= TimePerFrame;
+            
             processEvents();
             update(TimePerFrame);
         }
+        
+        updateStatistics(elapsedTime);
         render();
     }
 }
@@ -93,9 +92,8 @@ void Game::updateStatistics(sf::Time elapsedTime)
     if (mStatisticsUpdateTime >= sf::seconds(1.0f))
     {
         mStatisticsText.setString(
-                                  //"Frames / Second = " + std::string::toString toString(mStatisticsNumFrames) + "\n" +
-                                  //"Time / Update = " + toString(mStatisticsUpdateTime.asMicroseconds() / mStatisticsNumFrames) + "us"
-                                  "Test string"
+                                  "Frames / Second = " + toString(mStatisticsNumFrames) + "\n" +
+                                  "Time / Update = " + toString(mStatisticsUpdateTime.asMicroseconds() / mStatisticsNumFrames) + "us"
                                   );
         
         mStatisticsUpdateTime -= sf::seconds(1.0f);

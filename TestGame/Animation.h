@@ -1,11 +1,3 @@
-//
-//  Animation.h
-//  TestGame
-//
-//  Created by Lucas Berezy on 16/07/2014.
-//  Copyright (c) 2014 Lucas Berezy. All rights reserved.
-//
-
 #ifndef ANIMATION_H
 #define ANIMATION_H
 

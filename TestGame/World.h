@@ -1,11 +1,3 @@
-//
-//  World.h
-//  TestGame
-//
-//  Created by Lucas Berezy on 16/07/2014.
-//  Copyright (c) 2014 Lucas Berezy. All rights reserved.
-//
-
 #ifndef WORLD_H
 #define WORLD_H
 
@@ -20,6 +12,8 @@
 #include <SFML/Graphics/Texture.hpp>
 
 #include <tmx/MapLoader.h>
+
+#include <Box2D/Box2D.h>
 
 #include <array>
 
@@ -65,6 +59,9 @@ private:
     sf::Vector2f						mSpawnPosition;
     float								mScrollSpeed;
     Person*							mPlayer;
+    
+    b2Vec2  mGravitySettings;
+    b2World mPhysicsWorld;
 };
 
 #endif

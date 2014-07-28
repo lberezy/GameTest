@@ -1,11 +1,3 @@
-//
-//  SceneNode.h
-//  TestGame
-//
-//  Created by Lucas Berezy on 20/07/2014.
-//  Copyright (c) 2014 Lucas Berezy. All rights reserved.
-//
-
 #ifndef SCENENODE_H
 #define SCENENODE_H
 

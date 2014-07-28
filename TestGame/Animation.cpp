@@ -1,14 +1,4 @@
-//
-//  Animation.cpp
-//  TestGame
-//
-//  Created by Lucas Berezy on 16/07/2014.
-//  Copyright (c) 2014 Lucas Berezy. All rights reserved.
-//
-
 #include <stdio.h>
-
-
 #include "Animation.h"
 
 game::Animation::Animation(sf::Texture &texture, int frames, int framerate) {

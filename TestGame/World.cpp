@@ -1,11 +1,3 @@
-//
-//  World.cpp
-//  TestGame
-//
-//  Created by Lucas Berezy on 16/07/2014.
-//  Copyright (c) 2014 Lucas Berezy. All rights reserved.
-//
-
 #include "World.h"
 #include "ResourcePath.hpp"
 
@@ -22,6 +14,9 @@ World::World(sf::RenderWindow& window)
 , mSpawnPosition(mWorldView.getSize().x / 2.f, mWorldBounds.height - mWorldView.getSize().y / 2.f)
 , mScrollSpeed(-50.f)
 , mPlayer(nullptr)
+, mTiledMap(resourcePath() + "test.tmx")
+, mGravitySettings(0.f, 9.8f)
+, mPhysicsWorld(mGravitySettings)
 {
     loadTextures();
     buildScene();
@@ -60,6 +55,7 @@ void World::draw()
 void World::loadTextures()
 {
     mTextures.load(Textures::Player, resourcePath() + "character_01.bmp");
+    mTextures.load(Textures::RegularBox, resourcePath() + "box.png");
     //mTextures.load(Textures::Raptor, "Media/Textures/Raptor.png");
     //mTextures.load(Textures::Desert, "Media/Textures/Desert.png");
 }

@@ -17,6 +17,9 @@
 		A00FECCF197B842A00C92118 /* libBox2D.2.3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A00FECCE197B842A00C92118 /* libBox2D.2.3.0.dylib */; };
 		A00FECD5197C94B400C92118 /* SceneNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A00FECD4197C94B400C92118 /* SceneNode.cpp */; };
 		A00FECD7197C953800C92118 /* SpriteNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A00FECD6197C953800C92118 /* SpriteNode.cpp */; };
+		A00FECDD197F5A2C00C92118 /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = A00FECDB197F5A2C00C92118 /* box.png */; };
+		A00FECDE197F5A2C00C92118 /* ground.png in Resources */ = {isa = PBXBuildFile; fileRef = A00FECDC197F5A2C00C92118 /* ground.png */; };
+		A00FECE1197F5A9100C92118 /* Box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A00FECE0197F5A9100C92118 /* Box.cpp */; };
 		A02CE4E0197233C100D89C70 /* Jump.ogg in Resources */ = {isa = PBXBuildFile; fileRef = A02CE4DD197233C100D89C70 /* Jump.ogg */; };
 		A02CE4E1197233C100D89C70 /* Mario_Theme.ogg in Resources */ = {isa = PBXBuildFile; fileRef = A02CE4DE197233C100D89C70 /* Mario_Theme.ogg */; };
 		A02CE4E2197233C100D89C70 /* Mario_tileset.png in Resources */ = {isa = PBXBuildFile; fileRef = A02CE4DF197233C100D89C70 /* Mario_tileset.png */; };
@@ -58,6 +61,11 @@
 		A00FECD6197C953800C92118 /* SpriteNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteNode.cpp; sourceTree = "<group>"; };
 		A00FECD8197C954700C92118 /* SpriteNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpriteNode.h; sourceTree = "<group>"; };
 		A00FECD9197CA17000C92118 /* ResourceIdentifiers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResourceIdentifiers.h; sourceTree = "<group>"; };
+		A00FECDA197D0A5500C92118 /* StringHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringHelpers.h; sourceTree = "<group>"; };
+		A00FECDB197F5A2C00C92118 /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box.png; sourceTree = "<group>"; };
+		A00FECDC197F5A2C00C92118 /* ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ground.png; sourceTree = "<group>"; };
+		A00FECDF197F5A6100C92118 /* Box.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
+		A00FECE0197F5A9100C92118 /* Box.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Box.cpp; sourceTree = "<group>"; };
 		A02CE4DD197233C100D89C70 /* Jump.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; name = Jump.ogg; path = "../../../Downloads/Mario source/Jump.ogg"; sourceTree = "<group>"; };
 		A02CE4DE197233C100D89C70 /* Mario_Theme.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; name = Mario_Theme.ogg; path = "../../../Downloads/Mario source/Mario_Theme.ogg"; sourceTree = "<group>"; };
 		A02CE4DF197233C100D89C70 /* Mario_tileset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mario_tileset.png; path = "../../../Downloads/Mario source/Mario_tileset.png"; sourceTree = "<group>"; };
@@ -139,7 +147,11 @@
 				A0C1AADE197107EC000D33FA /* ResourcePath.hpp */,
 				A0C1AAEF197119E6000D33FA /* Person.cpp */,
 				A0C1AAF11972228D000D33FA /* Person.h */,
+				A00FECDF197F5A6100C92118 /* Box.h */,
+				A00FECE0197F5A9100C92118 /* Box.cpp */,
+				A00FECDA197D0A5500C92118 /* StringHelpers.h */,
 				A00FECD9197CA17000C92118 /* ResourceIdentifiers.h */,
+				A00FECD1197C942C00C92118 /* ResourceHolder.h */,
 				A00FECCB197B76BB00C92118 /* Game.cpp */,
 				A00FECCD197B76DA00C92118 /* Game.h */,
 				A02CE4E3197514CC00D89C70 /* GameEntity.h */,
@@ -152,7 +164,6 @@
 				A00FECD4197C94B400C92118 /* SceneNode.cpp */,
 				A00FECD8197C954700C92118 /* SpriteNode.h */,
 				A00FECD6197C953800C92118 /* SpriteNode.cpp */,
-				A00FECD1197C942C00C92118 /* ResourceHolder.h */,
 				A00FECBD1976152B00C92118 /* Renderable.h */,
 				A0C1AADF197107EC000D33FA /* main.cpp */,
 				A0C1AAE1197107EC000D33FA /* Resources */,
@@ -172,6 +183,8 @@
 		A0C1AAE1197107EC000D33FA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A00FECDB197F5A2C00C92118 /* box.png */,
+				A00FECDC197F5A2C00C92118 /* ground.png */,
 				A00FECC71976AB9400C92118 /* nestle.png */,
 				A00FECC51976AB8200C92118 /* test.tmx */,
 				A00FECC31976930E00C92118 /* character_01.bmp */,
@@ -247,6 +260,7 @@
 			files = (
 				A02CE4E2197233C100D89C70 /* Mario_tileset.png in Resources */,
 				A02CE4E1197233C100D89C70 /* Mario_Theme.ogg in Resources */,
+				A00FECDE197F5A2C00C92118 /* ground.png in Resources */,
 				A02CE51D1975638E00D89C70 /* grass-tiles-2-small.png in Resources */,
 				A0C1AAE9197107EC000D33FA /* icon.png in Resources */,
 				A02CE4E0197233C100D89C70 /* Jump.ogg in Resources */,
@@ -256,6 +270,7 @@
 				A00FECC81976AB9400C92118 /* nestle.png in Resources */,
 				A0C1AAE5197107EC000D33FA /* nice_music.ogg in Resources */,
 				A0C1AAE3197107EC000D33FA /* cute_image.jpg in Resources */,
+				A00FECDD197F5A2C00C92118 /* box.png in Resources */,
 				A00FECC61976AB8200C92118 /* test.tmx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +310,7 @@
 				A0C1AADD197107EC000D33FA /* ResourcePath.mm in Sources */,
 				A00FECCC197B76BB00C92118 /* Game.cpp in Sources */,
 				A02CE516197562D300D89C70 /* MapLayer.cpp in Sources */,
+				A00FECE1197F5A9100C92118 /* Box.cpp in Sources */,
 				A00FECC219765FFA00C92118 /* Animation.cpp in Sources */,
 				A02CE517197562D300D89C70 /* MapLoaderPrivate.cpp in Sources */,
 				A02CE519197562D300D89C70 /* MapObject.cpp in Sources */,

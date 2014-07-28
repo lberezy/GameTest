@@ -1,11 +1,3 @@
-//
-//  Game.h
-//  TestGame
-//
-//  Created by Lucas Berezy on 20/07/2014.
-//  Copyright (c) 2014 Lucas Berezy. All rights reserved.
-//
-
 #ifndef GAME_H
 #define GAME_H
 
@@ -41,7 +33,7 @@ private:
     sf::RenderWindow		mWindow;
     World					mWorld;
     
-	  	sf::Font				mFont;
+    sf::Font				mFont;
     sf::Text				mStatisticsText;
     sf::Time				mStatisticsUpdateTime;
     std::size_t				mStatisticsNumFrames;

@@ -1,11 +1,3 @@
-//
-//  ResourceIdentifiers.h
-//  TestGame
-//
-//  Created by Lucas Berezy on 21/07/2014.
-//  Copyright (c) 2014 Lucas Berezy. All rights reserved.
-//
-
 #ifndef RESOURCEIDENTIFIERS_H
 #define RESOURCEIDENTIFIERS_H
 
@@ -23,6 +15,7 @@ namespace Textures
         Player,
         Raptor,
         Desert,
+        RegularBox,
     };
 }
 

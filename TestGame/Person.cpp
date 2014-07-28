@@ -1,19 +1,10 @@
-//
-//  Player.cpp
-//  TestGame
-//
-//  Created by Lucas Berezy on 12/07/2014.
-//  Copyright (c) 2014 Lucas Berezy. All rights reserved.
-//
-
 #include "Person.h"
 #include "ResourceHolder.h"
 
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/RenderStates.hpp>
 
-Textures::ID toTextureID(Person
-::Type type)
+Textures::ID toTextureID(Person::Type type)
 {
     switch (type)
     {
@@ -22,8 +13,9 @@ Textures::ID toTextureID(Person
             
         case Person::Raptor:
             return Textures::Raptor;
+        default:
+            return Textures::Player;
     }
-    return Textures::Player;
 }
 
 Person::Person(Type type, const TextureHolder& textures)

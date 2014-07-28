@@ -1,4 +1,3 @@
-
 //
 // Disclamer:
 // ----------
@@ -13,7 +12,6 @@
 // application bundle. To get the path to these resource, use the helper
 // method resourcePath() from ResourcePath.hpp
 //
-
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 
